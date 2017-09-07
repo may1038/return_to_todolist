@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <form class="" action="/input" method="post">
+        <div class="todo">
+          <input type="text" name="todo" value="" placeholder="Add a todo...">
+          <input type="submit" name="" value="Add todo">
+        </div>
+      </form>
+
+      {{#todos}}
+      <form class="" action="/completed" method="post">
+        <div class="button">
+          <button class="btn" type="submit" name="button" value="{{id}}">Delete</button>
+          <span>{{task}}</span>
+          <br>
+        </div>
+      </form>
+      {{/todos}}
+    </div>
+
+  </body>
+</html>
