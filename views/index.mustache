@@ -19,8 +19,17 @@
       {{#todos}}
       <form class="" action="/completed" method="post">
         <div class="button">
-          <button class="btn" type="submit" name="button" value="{{id}}">Delete</button>
+
+          <input type="hidden" name="todoId" value="{{id}}"></input>
+          <button class="btn" type="submit" name="button">Delete</button>
           <span>{{task}}</span>
+          <br>
+        </div>
+      </form>
+      <form class="" action="/edit" method="post">
+        <div class="button">
+          <input type="text" name="edit" value="" placeholder="Edit Task">
+          <button class="btn" type="submit" name="editBtn" value="{{id}}">Update</button>
           <br>
         </div>
       </form>
